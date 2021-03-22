@@ -47,14 +47,14 @@ function generateHint(guess) {
     let targetIndex = solutionArray.indexOf(guessArray[i])
     if (targetIndex > -1) {
       correctLetters++
-      solutionArray[solutionArray.indexOf(guessArray[i])] = null
+      solutionArray[targetIndex] = null
     }
   }
   return `${correctLetterLocations}-${correctLetters}`
 }
 
 function mastermind(guess) {
-  solution = "abcd" // Comment this out to generate a random solution
+  // solution = "abcd" // Comment this out to generate a random solution
   // your code here
   if (guess == solution) {
     console.log("You guessed it!")
